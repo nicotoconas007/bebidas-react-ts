@@ -1,12 +1,12 @@
 import { lazy, Suspense } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import Layout from "./layouts/Layout"
 const FavoritesPage = lazy(() => import("./views/FavoritesPage"))
 const IndexPage = lazy(() => import("./views/IndexPage"))
 
 export default function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={
@@ -21,6 +21,6 @@ export default function AppRouter() {
             }/>
           </Route>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }

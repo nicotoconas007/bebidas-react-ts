@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react"
 import { NavLink, useLocation } from "react-router-dom"
 import { useAppStore } from "../stores/useAppStore"
+import logo from "../assets/logo.svg"
 
 export default function Header() {
 
@@ -46,7 +47,7 @@ export default function Header() {
         <div className="mx-auto px-5 container py-16">
             <div className="flex justify-between items-center">
                 <div>
-                    <img className="w-32" src="src/assets/logo.svg" alt="logo" />
+                    <img className="w-32" src={logo} alt="logo" />
                 </div>
                 <nav className="flex gap-4">
                   <NavLink 
